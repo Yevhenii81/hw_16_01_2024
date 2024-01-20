@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <ctime>
@@ -157,7 +157,7 @@ public:
         SYSTEMTIME st;
         GetSystemTime(&st);
         
-        st.wHour = (st.wHour + 3) % 24;
+        st.wHour = (st.wHour + 2) % 24;
         printf("%04d-%02d-%02d %02d:%02d:%02d\n\n", st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond);
     }
 
@@ -316,6 +316,8 @@ public:
 
 int main()
 {
+    Sleep(NULL);
+
     srand(time(NULL));
 
     Student student;
